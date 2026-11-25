@@ -1,0 +1,106 @@
+/* AGDHO: estilos próprios da página (somente tokens do design system; tamanhos de fonte inteiros) */
+html { scroll-behavior: smooth; }
+section[id], [id].anchor { scroll-margin-top: var(--anchor-offset); }
+img { max-width: 100%; display: block; }
+.ag-nav-logo img { max-width: none; }
+.skip { position: absolute; left: -9999px; top: 8px; background: var(--white); padding: 10px 14px; z-index: 200; border-radius: var(--radius-sm); }
+.skip:focus { left: 8px; }
+
+/* Nav: logo e menu mobile */
+.ag-nav-link[aria-current="true"] { color: var(--purple); }
+.mobile-menu { display: none; position: fixed; top: 60px; left: 0; right: 0; z-index: 99; background: var(--white); border-bottom: 1px solid var(--border); padding: 8px var(--gutter-tablet) 24px; }
+.mobile-menu.open { display: block; }
+.mobile-menu a { display: flex; align-items: center; min-height: var(--touch); font-size: 16px; color: var(--text); border-bottom: 1px solid var(--border); }
+.mobile-menu a.ag-btn { margin-top: 20px; border-bottom: none; justify-content: center; color: var(--white); }
+@media (min-width: 1025px) { .mobile-menu { display: none !important; } }
+@media (max-width: 600px) { .mobile-menu { top: 56px; padding-left: var(--gutter-mobile); padding-right: var(--gutter-mobile); } }
+
+/* Hero */
+.hero-meta { margin-top: 48px; }
+
+/* Sobre */
+.split { display: grid; grid-template-columns: 5fr 7fr; gap: 64px; align-items: center; }
+.split--rev { grid-template-columns: 7fr 5fr; }
+.photo { border-radius: var(--radius); overflow: hidden; background: var(--white); }
+.photo img { width: 100%; height: 100%; object-fit: cover; }
+.photo--portrait { aspect-ratio: 4 / 5; }
+.photo--land { aspect-ratio: 3 / 2; }
+.photo figcaption, .caption { font-size: 12px; line-height: 1.5; letter-spacing: 0.01em; color: var(--text-3); margin-top: 10px; }
+.ag-dark .caption { color: var(--on-dark-3); }
+.prose p { margin: 0 0 16px; color: var(--text-2); }
+.prose p:last-child { margin-bottom: 0; }
+.prose strong { color: var(--text); font-weight: 500; }
+.facts { margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--border); }
+.fact { padding: 18px 20px 0 0; }
+.fact + .fact { padding-left: 20px; border-left: 1px solid var(--border); }
+.fact-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); margin-bottom: 6px; }
+.fact-text { font-size: 14px; line-height: 1.6; color: var(--text); margin: 0; }
+
+/* Tese (escuro) */
+.thesis .ag-quote { max-width: 860px; }
+.thesis .ag-quote p { font-size: 32px; line-height: 1.3; }
+.thesis-note { margin-top: 32px; max-width: 720px; font-size: 16px; color: var(--on-dark-2); }
+
+/* Serviços */
+.svc-block + .svc-block { margin-top: 88px; }
+.svc-head { display: grid; grid-template-columns: 5fr 7fr; gap: 48px; align-items: end; }
+.svc-head .ag-lead { margin-top: 0; font-size: 18px; }
+.ag-col-list { margin: 14px 0 0; padding: 0; list-style: none; }
+.ag-col-list li { font-size: 14px; line-height: 1.6; color: var(--text-2); padding-left: 14px; position: relative; margin-bottom: 4px; }
+.ag-col-list li::before { content: ""; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; border-radius: var(--radius-dot); background: var(--purple); }
+
+/* Abordagem (escuro) */
+.formats { margin-top: 64px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.ag-panel p { margin: 0; }
+
+/* Trajetória */
+.timeline { margin-top: 56px; border-top: 1px solid var(--border); }
+.tl-item { display: grid; grid-template-columns: 160px 1fr; gap: 32px; padding: 24px 0; border-bottom: 1px solid var(--border); }
+.tl-when { font-size: 15px; font-weight: 700; letter-spacing: 0.06em; color: var(--blue); }
+.tl-role { font-size: 18px; font-weight: 500; line-height: 1.3; letter-spacing: -0.015em; margin: 0 0 6px; color: var(--text); }
+.tl-desc { font-size: 14px; line-height: 1.6; color: var(--text-2); margin: 0; }
+.intl { margin-top: 64px; }
+.intl .ag-h3 { margin-bottom: 8px; }
+.edu { margin-top: 64px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+
+/* Publicações */
+.pub-grid { display: grid; grid-template-columns: 7fr 5fr; gap: 64px; margin-top: 48px; }
+.pub-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--border); }
+.pub-list li { padding: 16px 0; border-bottom: 1px solid var(--border); }
+.pub-list a, .pub-list .pub-title { font-size: 16px; font-weight: 500; line-height: 1.4; }
+.pub-list a::after { content: " →"; }
+.pub-meta { display: block; font-size: 12px; color: var(--text-3); margin-top: 4px; letter-spacing: 0.01em; }
+.pub-sub { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); margin: 40px 0 12px; }
+.pub-sub:first-child { margin-top: 0; }
+.talks { margin-top: 24px; }
+
+/* CTA band */
+.cta-band { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; max-width: var(--container); margin: 0 auto; }
+.cta-band p { margin: 12px 0 0; font-size: 18px; font-weight: 300; color: rgba(255,255,255,0.86); max-width: 640px; }
+
+/* Contato */
+.contact-direct { margin-top: 32px; display: grid; gap: 14px; }
+.contact-direct .fact-label { margin-bottom: 2px; }
+.contact-direct a { font-size: 18px; font-weight: 500; }
+.ag-form { margin-top: 8px; }
+textarea.ag-form-textarea { min-height: 132px; resize: vertical; }
+
+/* Footer */
+.ag-footer-logo img { width: 140px; }
+.ag-footer-inner { max-width: var(--container); margin: 0 auto; }
+
+/* Breakpoints */
+@media (max-width: 1024px) {
+  .split, .split--rev, .pub-grid, .svc-head { grid-template-columns: 1fr; gap: 40px; }
+  .split .photo--portrait { max-width: 480px; }
+  .formats { grid-template-columns: 1fr; }
+  .thesis .ag-quote p { font-size: 24px; }
+  .edu { grid-template-columns: 1fr; gap: 32px; }
+}
+@media (max-width: 600px) {
+  .facts { grid-template-columns: 1fr; }
+  .fact + .fact { padding-left: 0; border-left: none; }
+  .tl-item { grid-template-columns: 1fr; gap: 6px; }
+  .thesis .ag-quote p { font-size: 20px; }
+  .svc-block + .svc-block { margin-top: 56px; }
+}

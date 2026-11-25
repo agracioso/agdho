@@ -1,0 +1,16 @@
+/* AGDHO Design System v2: tokens (tokens.json) */
+:root {
+  --purple:#8e24a9; --purple-deep:#6a2a80; --blue:#3652ad; --orange:#fe7a36;
+  --aqua:#2dd1a9; --sage:#8bb19d; --teal:#47a5b8;
+  --white:#ffffff; --off-white:#f8f8f8; --charcoal:#272727; --slate:#27323b; --forest:#2e4238; --black:#000000;
+  --text:#272727; --text-2:#575f66; --text-3:#636b72; --border:rgba(39,39,39,0.12);
+  --nav-bg:rgba(248,248,248,0.92); --on-dark:#ffffff; --on-dark-2:rgba(255,255,255,0.72); --on-dark-3:rgba(255,255,255,0.6);
+  --divider-dark:rgba(255,255,255,0.12); --panel-bg:rgba(255,255,255,0.04);
+  --focus:#3652ad; --focus-on-dark:#fe7a36;
+  --font-sans:"Neue Montreal","Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
+  --container:1200px; --section-y:88px; --section-y-feature:96px; --section-y-tablet:72px; --section-y-mobile:56px;
+  --gutter:48px; --gutter-tablet:24px; --gutter-mobile:16px; --nav-h:64px; --hero-top:120px;
+  --gap-eyebrow:22px; --gap-headline:26px; --gap-cta:32px; --grid-top:40px; --col-pad:36px; --touch:44px; --anchor-offset:80px;
+  --radius:12px; --radius-sm:7px; --radius-panel:14px; --radius-dot:50%;
+  --shadow-cta:0 8px 24px rgba(142,36,169,0.28); --shadow-focus-field:0 0 0 3px rgba(54,82,173,0.12);
+}
